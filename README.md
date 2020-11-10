@@ -10,7 +10,7 @@ Shortcomings of WarpWallet:
 - No checksum protection of the salt
 - The result is uncompressed Bitcoin address (it would be better to get BIP39 seed at the output instead, or at least compressed address)
 
-The traditional SHA-256 [brainwallet](https://en.bitcoin.it/wiki/Brainwallet) (implemented in [Bitaddress](https://github.com/pointbiz/bitaddress.org)) is even worse: it enables the user to not use salt, the key stretching is very weak.
+The traditional SHA-256 [brainwallet](https://en.bitcoin.it/wiki/Brainwallet) (implemented in [Bitaddress](https://github.com/pointbiz/bitaddress.org)) is even worse: it enables the user to avoid using salt, the key stretching is very weak.
 
 ## Our criteria for a secure storage system
 
