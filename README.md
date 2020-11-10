@@ -1,6 +1,6 @@
 # How Jason Bourne Stores His Bitcoin in 2020
 
-[WarpWalelt](http://maxtaco.github.io/bitcoin/2014/01/16/how-jason-bourne-stores-his-bitcoin/) is so 2014. Now, Jason Bourne is using [Doubleslow](https://github.com/vstoykovbg/doubleslow) and [Steghide](http://steghide.sourceforge.net/).
+[WarpWallet](http://maxtaco.github.io/bitcoin/2014/01/16/how-jason-bourne-stores-his-bitcoin/) is so 2014. Now, Jason Bourne is using [Doubleslow](https://github.com/vstoykovbg/doubleslow) and [Steghide](http://steghide.sourceforge.net/).
 
 Shortcomings of WarpWallet:
 
@@ -9,6 +9,8 @@ Shortcomings of WarpWallet:
 - No user interface to change the default settings
 - No checksum protection of the salt
 - The result is uncompressed Bitcoin address (it would be better to get BIP39 seed at the output instead, or at least compressed address)
+
+The traditional SHA-256 [brainwallet](https://en.bitcoin.it/wiki/Brainwallet) (implemented in [Bitaddress](https://github.com/pointbiz/bitaddress.org)) is even worse: it enables the user to not use salt, the key stretching is very weak.
 
 ## Our criteria for a secure storage system
 
@@ -91,4 +93,8 @@ Alternatively, you may remember the first two words from the output of Doubleslo
 
 For better security, Doubleslow should be modified not to print the derived key (or seed) on the screen. Instead, it would be better to import the seed directly to a wallet like Electrum (by creating a wallet file). Or shield the monitor against surveillance (optical and radio).
 
+# Links
+
+[WarpWallet](http://maxtaco.github.io/bitcoin/2014/01/16/how-jason-bourne-stores-his-bitcoin/)
+[Doubleslow](https://github.com/vstoykovbg/doubleslow) and [Steghide](http://steghide.sourceforge.net/).
 
