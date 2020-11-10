@@ -29,7 +29,7 @@ He uploads that image along with other images to his cloud hosting account and o
 
 The key stretching scripts can be stored separately (not inside img1.jpg) to minimize the changes to the image (it can be publicly accessible in Github).
 
-Instead of using Steghide (and remembering another passphrase - the one Steghide uses to encrypt the secrets inside the image) a simple checksum of the image can be used (converted to BIP39, RFC1751, or another format with mnemonic-sha256.py or another script from mnemonic-hashes collection).
+Instead of using Steghide (and remembering another passphrase - the one Steghide uses to encrypt the secrets inside the image) a simple checksum of the image can be used (converted to BIP39, RFC1751, or another format with `mnemonic-sha256.py` or another script from [mnemonic-hashes](https://github.com/vstoykovbg/mnemonic-hashes) collection).
 
 One salt/seed can produce multiple wallets (when using different passphrases and key stretching settings).
 
@@ -95,6 +95,10 @@ For better security, Doubleslow should be modified not to print the derived key 
 
 # Links
 
-[WarpWallet](http://maxtaco.github.io/bitcoin/2014/01/16/how-jason-bourne-stores-his-bitcoin/)
-[Doubleslow](https://github.com/vstoykovbg/doubleslow) and [Steghide](http://steghide.sourceforge.net/).
+* [Dangers of using a brainwallet](https://en.bitcoin.it/wiki/Brainwallet)
+* [Doubleslow](https://github.com/vstoykovbg/doubleslow) - strong key stretching
+* [Doublerandom](https://github.com/vstoykovbg/doublerandom) - randomness mixers
+* [Steghide](http://steghide.sourceforge.net/) - hiding secrets inside images, audio and video
+* [mnemonic-hashes](https://github.com/vstoykovbg/mnemonic-hashes) - hashes in different formats: BIP39 mnemonic, RFC1751 mnemonic, hexadecimal, Base64, Base62, Base58Check
+* [Cryptopup](https://github.com/vstoykovbg/cryptopup/) - live Linux distribution with crypto tools that fits on a CD (it's only 531MiB).
 
