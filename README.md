@@ -6,6 +6,8 @@ Shortcomings of WarpWallet:
 
 - JavaScript in the browser is inefficient compared with Python
 - It requires too little CPU/RAM resources (about 2 seconds when implemented in Python on i3-2100)
+- No user interface to change the default settings
+- No checksum protection of the salt
 - The result is uncompressed Bitcoin address (it would be better to get BIP39 seed at the output instead, or at least compressed address)
 
 ## Our criteria for a secure storage system:
