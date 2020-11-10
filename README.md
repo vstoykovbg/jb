@@ -1,17 +1,21 @@
 # How Jason Bourne Stores His Bitcoin in 2020
 
-WarpWalelt is so 2014. Now, Jason Bourne is using Doubleslow and Steghide.
+[WarpWalelt](http://maxtaco.github.io/bitcoin/2014/01/16/how-jason-bourne-stores-his-bitcoin/) is so 2014. Now, Jason Bourne is using [Doubleslow](https://github.com/vstoykovbg/doubleslow) and [Steghide](http://steghide.sourceforge.net/).
 
 Shortcomings of WarpWallet:
+
 - JavaScript in the browser is inefficient compared with Python
 - It requires too little CPU/RAM resources (about 2 seconds when implemented in Python on i3-2100)
 - The result is uncompressed Bitcoin address (it would be better to get BIP39 seed at the output instead, or at least compressed address)
 
-The storage system should should:
+## Our criteria for a secure storage system:
 
 (1) Prevent others from stealing your coin
+
 (2) Avoid accidental loss
+
 (3) Be low-cost
+
 (4) Be globally accessible
 
 ## Obscurity with steganography
