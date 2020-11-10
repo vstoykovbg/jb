@@ -10,15 +10,12 @@ Shortcomings of WarpWallet:
 - No checksum protection of the salt
 - The result is uncompressed Bitcoin address (it would be better to get BIP39 seed at the output instead, or at least compressed address)
 
-## Our criteria for a secure storage system:
+## Our criteria for a secure storage system
 
-(1) Prevent others from stealing your coin
-
-(2) Avoid accidental loss
-
-(3) Be low-cost
-
-(4) Be globally accessible
+1. Prevent others from stealing your coin
+2. Avoid accidental loss
+3. Be low-cost
+4. Be globally accessible
 
 ## Obscurity with steganography
 
@@ -26,7 +23,7 @@ Using programs like Steghide is optional.
 
 First Jason hides the key stretching parameters and multiple seeds (to be used in the future to derive different keys/seeds) with a program like Steghide in a randomly chosen image (img1.jpg).
 
-He uploads that image along with other images to his cloud hosting account and other online systems (email account) just to be sure that the data is stored safely and globally accessible (4).
+He uploads that image along with other images to his cloud hosting account and other online systems (email account) just to be sure that the data is stored safely and globally accessible.
 
 The key stretching scripts can be stored separately (not inside img1.jpg) to minimize the changes to the image (it can be publicly accessible in Github).
 
