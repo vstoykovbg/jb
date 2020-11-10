@@ -25,19 +25,19 @@ Using programs like Steghide is optional.
 
 First Jason hides the key stretching parameters and multiple seeds (to be used in the future to derive different keys/seeds) with a program like Steghide in a randomly chosen image (img1.jpg).
 
-He uploads that image along with other images to his cloud hosting account and other online systems (email account) just to be sure that the data is stored safely and globally accessible.
+He uploads that image along with other images to his cloud storage account and other online systems (email accounts) just to be sure that the data is stored safely and globally accessible.
 
-The key stretching scripts can be stored separately (not inside img1.jpg) to minimize the changes to the image (it can be publicly accessible in Github).
+The key stretching scripts can be stored separately (not inside img1.jpg) to minimize the changes to the image (the scripts can be publicly accessible and open source on Github, no need to hide them).
 
 Instead of using Steghide (and remembering another passphrase - the one Steghide uses to encrypt the secrets inside the image) a simple checksum of the image can be used (converted to BIP39, RFC1751, or another format with `mnemonic-sha256.py` or another script from [mnemonic-hashes](https://github.com/vstoykovbg/mnemonic-hashes) collection).
 
 One salt/seed can produce multiple wallets (when using different passphrases and key stretching settings).
 
-Jason uses obscurity only as an additional layer, not as a primary method of achieving security (security through obscurity is a bad practice when obscurity is used alone).
+Jason uses obscurity only as an additional layer, not as a primary method of achieving security ([security through obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity) is a bad practice when obscurity is used alone).
 
 ## Seed/salt generation
 
-Jason uses secure randomness mixers (Doublerandom) to create a truly random seed/salt and passphrases.
+Jason uses secure randomness mixers (Doublerandom) to create a truly random seed/salt and passphrases. The randomness mixers are using entropy from dice, coins, random mouse movements, noise from a microphone or a [noise generator](https://circuitdigest.com/electronic-circuits/simple-white-noise-generator-circuit-diagram), [haveged](https://wiki.archlinux.org/index.php/Haveged).
 
 ## Strong key stretching
 
