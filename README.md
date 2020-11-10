@@ -55,7 +55,7 @@ Unfortunately, it's not possible for a computer to not have non-volatile memory 
 
 Jason does not connect the air-gapped computer to other computers after he uses it for cryptographic stuff (in case there is hidden malware inside the BIOS/UEFI, the optical drive's firmware, the CPU).
 
-Jason is keeping his computer in a Faraday cage to reduce the risk of hypothetical malware transmitting data via modulating the signal on the USB cables.
+Jason is keeping his computer in a [Faraday cage](https://en.wikipedia.org/wiki/Faraday_cage) to reduce the risk of hypothetical malware transmitting data via modulating the signal on the USB cables.
 
 * [In April 2004, academic research revealed that flat panel and laptop displays are also vulnerable to electromagnetic eavesdropping.](https://en.wikipedia.org/wiki/Van_Eck_phreaking)
 
