@@ -14,7 +14,7 @@ The traditional SHA-256 [brainwallet](https://en.bitcoin.it/wiki/Brainwallet) (i
 
 ## Our criteria for a secure storage system
 
-1. Prevent others from stealing your coin
+1. Prevent others from stealing your private keys
 2. Avoid accidental loss
 3. Be low-cost
 4. Be globally accessible
