@@ -43,9 +43,11 @@ Jason uses secure randomness mixers (Doublerandom) to create a truly random seed
 
 The most important element of the system is the key stretching. It must be strong so Jason needs to remember a shorter passphrase (to achieve the same level of security). Jason does not want to risk losing his Bitcoin (or keys for his VeraCrypt container) in case another brain trauma occurs (it would be less likely to forget the shorter passphrase).
 
-Also, Jason may use Shamir's secret-sharing scheme to give keys to his trusted people so in case he forgets the password he can ask them "Did I gave you some codes for keeping?" (in case he remember who they are).
+Also, Jason may use [Shamir's secret-sharing scheme](https://en.wikipedia.org/wiki/Shamir's_Secret_Sharing) to give keys to his trusted people so in case he forgets the password he can ask them "Did I gave you some codes for keeping?" (in case he remember who they are).
 
-Jason is choosing a large number of iterations that take half an hour or even several hours on his slightly old computer he uses as an air-gapped computer dedicated to cryptographic stuff. He runs the OS ([Cryptopup](https://github.com/vstoykovbg/cryptopup/)) from a DVD (or a CD) inserted in a read-only optical device to reduce the risk of hypothetical malware writing the secrets on the optical disk. For the same reason, the computer does not have non-volatile memory devices (hard drive, USB flash drive).
+Jason is choosing a large number of iterations that take half an hour or even several hours on his slightly old computer he uses as an air-gapped computer dedicated to cryptographic stuff. The OS ([Cryptopup](https://github.com/vstoykovbg/cryptopup/)) is booted from a DVD (or a CD) inserted in a read-only optical device to reduce the risk of hypothetical malware writing the secrets on the optical disk. For the same reason, the computer does not have non-volatile memory devices (hard drive, USB flash drive).
+
+* [Proof of concept: malware on the HDD's firmware](https://www.malwaretech.com/2015/04/hard-disk-firmware-hacking-part-1.html)
 
 ## Air-gapped computer
 
@@ -55,13 +57,17 @@ Jason does not connect the air-gapped computer to other computers after he uses 
 
 Jason is keeping his computer in a Faraday cage to reduce the risk of hypothetical malware transmitting data via modulating the signal on the USB cables.
 
+* [In April 2004, academic research revealed that flat panel and laptop displays are also vulnerable to electromagnetic eavesdropping.](https://en.wikipedia.org/wiki/Van_Eck_phreaking)
+
 The computer is kept in a room without windows because the hypothetical malware can modulate the light emitted by the HDD LEDs. Or HDD LEDs are disconnected.
+
+* [Malware Lets a Drone Steal Data by Watching a Computer’s Blinking LED](https://www.wired.com/2017/02/malware-sends-stolen-data-drone-just-pcs-blinking-led/)
 
 The PC speaker is disconnected to reduce the risk of hypothetical malware transmitting secrets via ultrasound.
 
 ## Virtual keyboard
 
-Jason is using a virtual keyboard when typing passwords to reduce the risk of a hardware keylogger embedded on his keyboard or in the BIOS/UEFI level.
+Jason is using a virtual keyboard when typing passwords to reduce the risk of a hardware [keylogger](https://en.wikipedia.org/wiki/Keystroke_logging) embedded on his keyboard or a keylogger in the BIOS/UEFI.
 
 ## More obscurity
 
@@ -93,6 +99,16 @@ Alternatively, you may remember the first two words from the output of Doubleslo
 
 For better security, Doubleslow should be modified not to print the derived key (or seed) on the screen. Instead, it would be better to import the seed directly to a wallet like Electrum (by creating a wallet file). Or shield the monitor against surveillance (optical and radio).
 
+## Moving data from from/to the air-gapped computer securely
+
+Instead of using a USB flash drive, Jason is using only the keyboard and the monitor. To reduce the risk of human i/o errors he is using [RFC1751 encoding/decoding](https://github.com/vstoykovbg/RFC1751-encoding-decoding).
+
+It's risky to insert USB devices to the air-gapped computer because the hypothetical malware can abuse these devices (by writing data on the hidden areas of the memory - in the areas accessible only by the firmware, in the "unused" space by the filesystem).
+
+For the same reason, it's risky to use floppy disks and to have an optical drive capable of writing. The malware on the online computer can cooperate and upload the secrets to the attacker.
+
+Jason uses an old fashioned camera to photograph the screen in order to make a fast backup of RFC1751 encoded data. He does not use a smartphone (and QR codes) because the hypothetical malware can modulate the light from the monitor in a subtle way nondetectable by humans. And the hypothetical malware inside the smartphone can receive the hidden data and transmit it to the mothership.
+
 # Links
 
 * [Dangers of using a brainwallet](https://en.bitcoin.it/wiki/Brainwallet)
@@ -100,5 +116,6 @@ For better security, Doubleslow should be modified not to print the derived key 
 * [Doublerandom](https://github.com/vstoykovbg/doublerandom) - randomness mixers
 * [Steghide](http://steghide.sourceforge.net/) - hiding secrets inside images, audio and video
 * [mnemonic-hashes](https://github.com/vstoykovbg/mnemonic-hashes) - hashes in different formats: BIP39 mnemonic, RFC1751 mnemonic, hexadecimal, Base64, Base62, Base58Check
+* [shamir](https://github.com/iancoleman/shamir) - a single page tool for splitting secrets into parts or recreating secrets from existing parts
 * [Cryptopup](https://github.com/vstoykovbg/cryptopup/) - live Linux distribution with crypto tools that fits on a CD (it's only 531MiB).
 
