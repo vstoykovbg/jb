@@ -118,5 +118,5 @@ Jason uses an old fashioned camera to photograph the screen in order to make a f
 * [mnemonic-hashes](https://github.com/vstoykovbg/mnemonic-hashes) - hashes in different formats: BIP39 mnemonic, RFC1751 mnemonic, hexadecimal, Base64, Base62, Base58Check.
 * [shamir](https://github.com/iancoleman/shamir) - a single page tool for splitting secrets into parts or recreating secrets from existing parts.
 * [Cryptopup](https://github.com/vstoykovbg/cryptopup/) - live Linux distribution with crypto tools that fits on a CD (it's only 531MiB).
-* [Simple White Noise Generator Circuit](https://circuitdigest.com/electronic-circuits/simple-white-noise-generator-circuit-diagram) -  this circuit is more clever than other circtuis ([1](https://www.eeweb.com/simple-white-noise-generator/), [2](http://freenrg.info/Physics/Scalar_Vector_Pot_And_Rick_Andersen/Rick_Andersen_Noisegen.htm)) because it's less affected by the noise from the power supply line.
+* [Simple White Noise Generator Circuit](https://circuitdigest.com/electronic-circuits/simple-white-noise-generator-circuit-diagram) -  this circuit is more clever than other circuits ([1](https://www.eeweb.com/simple-white-noise-generator/), [2](http://freenrg.info/Physics/Scalar_Vector_Pot_And_Rick_Andersen/Rick_Andersen_Noisegen.htm)) because it's less affected by the noise from the power supply line.
 
