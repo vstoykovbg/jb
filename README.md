@@ -37,7 +37,7 @@ Jason uses obscurity only as an additional layer, not as a primary method of ach
 
 ## Seed/salt generation
 
-Jason uses secure randomness mixers (Doublerandom) to create a truly random seed/salt and passphrases. The randomness mixers are using entropy from dice, coins, random mouse movements, noise from a microphone or a [noise generator](https://circuitdigest.com/electronic-circuits/simple-white-noise-generator-circuit-diagram), [haveged](https://wiki.archlinux.org/index.php/Haveged).
+Jason uses secure randomness mixers (Doublerandom) to create a truly random seed/salt and passphrases. The randomness mixers are using entropy from dice, coins, random mouse movements, noise from a microphone or a [noise](https://en.wikipedia.org/wiki/Noise_generator) [generator](https://circuitdigest.com/electronic-circuits/simple-white-noise-generator-circuit-diagram), [haveged](https://wiki.archlinux.org/index.php/Haveged).
 
 ## Strong key stretching
 
