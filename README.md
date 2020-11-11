@@ -33,6 +33,8 @@ Instead of using Steghide (and remembering another passphrase - the one Steghide
 
 One salt/seed can produce multiple wallets (when using different passphrases and key stretching settings).
 
+Jason is using Doubleslow not only to generate BIP39 seeds and keys for cryptocurrencies but also passwords for his VeraCrypt containers. For example, the digest in WIF format can be used as a password for encrypting files (symmetric encryption). Some cryptographic applications may have a [password length limit](https://www.reddit.com/r/VeraCrypt/comments/aqatqi/is_it_possible_to_use_a_password_longer_than_64/), so the digest in BIP39 format may be too long for them.
+
 Jason uses obscurity only as an additional layer, not as a primary method of achieving security ([security through obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity) is a bad practice when obscurity is used alone).
 
 ## Seed/salt generation
