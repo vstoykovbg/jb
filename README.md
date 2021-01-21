@@ -1,4 +1,4 @@
-# How Jason Bourne Stores His Bitcoin in 2020
+# How Jason Bourne Stores His Bitcoin in 2021
 
 [WarpWallet](http://maxtaco.github.io/bitcoin/2014/01/16/how-jason-bourne-stores-his-bitcoin/) is so 2014. Now, Jason Bourne is using [Doubleslow](https://github.com/vstoykovbg/doubleslow) and [Steghide](http://steghide.sourceforge.net/).
 
@@ -39,7 +39,7 @@ Jason uses obscurity only as an additional layer, not as a primary method of ach
 
 ## Seed/salt generation
 
-Jason uses secure randomness mixers (Doublerandom) to create a truly random seed/salt and passphrases. The randomness mixers are using entropy from dice, coins, random mouse movements, noise from a microphone or a [noise](https://en.wikipedia.org/wiki/Noise_generator) [generator](https://circuitdigest.com/electronic-circuits/simple-white-noise-generator-circuit-diagram), [haveged](https://wiki.archlinux.org/index.php/Haveged).
+Jason uses secure randomness mixers ([Doublerandom](https://github.com/vstoykovbg/doublerandom)) to create a truly random seed/salt and passphrases. The randomness mixers are using entropy from dice, coins, random mouse movements, noise from a microphone or a [noise](https://en.wikipedia.org/wiki/Noise_generator) [generator](https://circuitdigest.com/electronic-circuits/simple-white-noise-generator-circuit-diagram), [haveged](https://wiki.archlinux.org/index.php/Haveged).
 
 ## Strong key stretching
 
