@@ -45,11 +45,15 @@ Jason uses secure randomness mixers ([Doublerandom](https://github.com/vstoykovb
 
 The most important element of the system is the key stretching. It must be strong so Jason needs to remember a shorter passphrase (to achieve the same level of security). Jason does not want to risk losing his Bitcoin (or keys for his VeraCrypt container) in case another brain trauma occurs (it would be less likely to forget the shorter passphrase).
 
-Also, Jason may use [Shamir's secret-sharing scheme](https://en.wikipedia.org/wiki/Shamir's_Secret_Sharing) to give keys to his trusted people so in case he forgets the password he can ask them "Did I gave you some codes for keeping?" (in case he remember who they are).
+The key stretching with the "seed extension" (also known as "extension word" and "passphrase") in the BIP39 specification is very weak (PBKDF2 using 2048 iterations of HMAC-SHA512). This is why it's better to use [Doubleslow](https://github.com/vstoykovbg/doubleslow) for a better key stretching.
 
 Jason is choosing a large number of iterations that take half an hour or even several hours on his slightly old computer he uses as an air-gapped computer dedicated to cryptographic stuff. The OS ([Cryptopup](https://github.com/vstoykovbg/cryptopup/)) is booted from a DVD (or a CD) inserted in a read-only optical device to reduce the risk of hypothetical malware writing the secrets on the optical disk. For the same reason, the computer does not have non-volatile memory devices (hard drive, USB flash drive).
 
 * [Proof of concept: malware on the HDD's firmware](https://www.malwaretech.com/2015/04/hard-disk-firmware-hacking-part-1.html)
+
+## Splitting the secrets
+
+Also, Jason may use [Shamir's secret-sharing scheme](https://en.wikipedia.org/wiki/Shamir's_Secret_Sharing) to give keys to his trusted people so in case he forgets the password he can ask them "Did I gave you some codes for keeping?" (in case he remember who they are).
 
 ## Air-gapped computer
 
